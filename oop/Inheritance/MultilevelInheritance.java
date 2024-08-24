@@ -7,7 +7,7 @@ package oop.Inheritance;
 
 public class MultilevelInheritance {
     public static void main(String[] args) {
-        Dog myDog = new Dog();
+        Dog1 myDog = new Dog1();
         myDog.eat(); // Inherited from Animal
         myDog.sleep(); // Inherited from Mammal
         myDog.bark(); // Dog's own method
@@ -15,21 +15,21 @@ public class MultilevelInheritance {
 }
 
 // ! Grandparent class
-class Animal {
+class Animal1 {
     void eat() {
         System.out.println("This animal eats food.");
     }
 }
 
 // ! Parent class
-class Mammal extends Animal {
+class Mammal1 extends Animal1 {
     void sleep() {
         System.out.println("This mammal sleeps.");
     }
 }
 
 // ! Child class
-class Dog extends Mammal {
+class Dog1 extends Mammal1 {
     void bark() {
         System.out.println("The dog barks.");
     }

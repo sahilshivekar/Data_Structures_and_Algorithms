@@ -10,26 +10,26 @@ public class HybridInheritance {
 }
 
 // ! Grandparent class
-class Animal {
+class Animal2 {
     void eat() {
         System.out.println("This animal eats food.");
     }
 }
 
 // ! Parent class
-class Mammal extends Animal {
+class Mammal2 extends Animal2 {
     void sleep() {
         System.out.println("This mammal sleeps.");
     }
 }
 
 // ! Interface
-interface Flyable {
+interface Flyable1 {
     void fly();
 }
 
 // ! Child class combining multiple inheritance types
-class Bat extends Mammal implements Flyable {
+class Bat extends Mammal2 implements Flyable1 {
     public void fly() {
         System.out.println("The bat flies.");
     }
