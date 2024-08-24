@@ -35,6 +35,7 @@ public class Encapsulation {
 
 class BankAccount {
     public String accNumber;
+    @SuppressWarnings("unused")
     private String password;
 
     void setAccNumber(String accNumber) {
