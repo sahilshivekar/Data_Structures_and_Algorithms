@@ -18,7 +18,8 @@ public class constructors {
         Student s2 = new Student("Sahil");
         Student s3 = new Student(86);
         Student s4 = new Student("Sahil", 86);
-        Student s5 = new Student(86, "Sahil");
+        Student s5 = new Student(68, "Shubham");
+        Student s6 = new Student(s4); //copy constructor
     }
 }
 
@@ -51,6 +52,15 @@ class Student {
         System.out.println("c5");
         this.name = name;
         this.rollNo = rollNo;
+    }
+
+    //copy constructor
+    Student(Student s){
+        System.out.println("c6");
+        this.name = s.name;
+        this.rollNo = s.rollNo;
+        System.out.println(this.name);
+        System.out.println(this.rollNo);
     }
 
     void setName(String name) {
