@@ -1,7 +1,11 @@
 package oop;
 
 /*
- * Abstraction simplifies interactions by focusing on what an object does, not how it does it.
+ * 
+ * Abstraction in OOP is the concept of simplifying complex systems by focusing 
+ * only on the essential features and hiding the implementation details.
+ * t allows you to work with a simplified model and ignore the complexities 
+ * of how things work internally.
  * 
  * - Cannot create an instance of abstract class
  * - Can have abstract/non-abstract methods
@@ -29,11 +33,10 @@ abstract class Animal4 {
     // Abstract method (does not have a body)
     abstract void makeSound();
 
-    void sleep(){
+    void sleep() {
         System.out.println("Animal sleep");
     }
 }
-
 
 // ! subclass (inheriting from Animal)
 class Cat extends Animal4 {
