@@ -98,7 +98,7 @@ public class RecursionBasics {
         // printInDecreasingOrder(10);
         // printInIncreasingOrder(10);
         // System.out.println(fibonacci(5));
-        int[] nums = { 1, 2, 3, 48, 5, 6, 48 };
+        // int[] nums = { 1, 2, 3, 48, 5, 6, 48 };
         // System.out.println(isSorted(nums, 0));
         // System.out.println(findFirstOccurence(nums, 48, 1)); //4
         // System.out.println(findLastOccurence(nums, 48, 0, -1));
