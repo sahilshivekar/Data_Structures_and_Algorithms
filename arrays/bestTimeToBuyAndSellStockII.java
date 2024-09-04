@@ -14,10 +14,8 @@ public class bestTimeToBuyAndSellStockII {
         for (int i = 1; i < a.length; i++) {
             if (buy < a[i]) {
                 profit += a[i] - buy;
-                buy = a[i];
-            } else {
-                buy = a[i];
             }
+            buy = a[i];
         }
         return profit;
     }
