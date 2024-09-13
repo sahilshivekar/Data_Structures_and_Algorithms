@@ -11,30 +11,36 @@ public class MinimumAndMaximum {
 
     /*
      * One way is to linearly search in the array and update the value of max and
-     * min varialbe.
+     * min.
      */
-    public static int linearApproachMax(int[] arr) {
-        int max = Integer.MIN_VALUE;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
+    public static Pair linearApproach(int[] arr, int n) {
+        Pair mm = new Pair();
+
+        if (n == 1) {
+            mm.max = arr[0];
+            mm.min = arr[0];
+            return mm;
+        }
+
+        if (arr[0] > arr[1]) {
+            mm.max = arr[0];
+            mm.min = arr[1];
+        } else {
+            mm.max = arr[1];
+            mm.min = arr[0];
+        }
+
+        for (int i = 2; i < n; i++) {
+            if (arr[i] > mm.max) {
+                mm.max = arr[i];
+            } else if (arr[i] < mm.min) {
+                mm.min = arr[i];
             }
         }
-        return max;
+
+        return mm;
     }
-
-    public static int linearApproachMin(int[] arr) {
-        int min = Integer.MAX_VALUE;
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-            }
-        }
-        return min;
-    }
-
     /*
      * Another way is to sort and array and then return the first and last element
      * of the array.
@@ -82,7 +88,7 @@ public class MinimumAndMaximum {
             } else {
                 mm.min = arr[right];
                 mm.max = arr[left];
-            }           
+            }
             return mm;
         } else {
             int mid = left + (right - left) / 2;
@@ -146,8 +152,9 @@ public class MinimumAndMaximum {
         int[] arr = { 3, 5, 4, 1, 9 };
 
         System.out.println("Using Linear search");
-        System.out.println("Maximum element: " + linearApproachMax(arr));
-        System.out.println("Minimum element: " + linearApproachMin(arr));
+        Pair linear = linearApproach(arr, arr.length);
+        System.out.println("Maximum element: " + linear.max);
+        System.out.println("Minimum element: " + linear.min);
         System.out.println();
 
         System.out.println("Using sorting approach");
