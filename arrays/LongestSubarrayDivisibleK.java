@@ -5,7 +5,7 @@ package arrays;
 
 import java.util.*;
 
-public class LargestSubarrayDivisibleK {
+public class LongestSubarrayDivisibleK {
     public static int sol(int arr[], int n, int k) {
         {
             Map<Integer, Integer> map = new HashMap<>();
